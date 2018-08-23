@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --shadow: 3px 4px 10px #534940,
+            inset 3px 5px 8px #534940;
+    --text-shadow_dark: 2px 2px 2px #281a0b;
+    --text-shadow_light: -3px 1px 20px #fff;
+    --sans: 'Oswald', sans-serif;
+    --serif: 'Merriweather', serif;
+    --deco: 'Yesteryear', cursive;
+}
+
+body {
+    background: #736D5C;
+}
+
+.page_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 40px auto auto 45px;
+    grid-template-areas:
+        'sitenav socialnav'
+        'info content'
+        'info content'
+        'footer footer';
+    width: 87%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border: solid 1px #8b8676;
+    box-shadow: 3px 3px 8px #291C11;
+}
+
+.home_page_container {
+    background-image: url(/images/uploads/wainscot-background.jpg), url(/images/uploads/plaster-background.jpg);
+    background-size: 35% 57%, 100% 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-position-y: bottom, top;
+}
+
+.home_shop-info {
+    max-width: 540px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: info;
+    text-align: center;
+}
+
+.home_shop-info > * {
+    width: 100%;
+}
+
+.home_biz-name {
+    font-size: 1px;
+    opacity: 0;
+}
+
+.tagline {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 900;
+    color: #4D2F17;
+    position: absolute;
+    top: 25%;
+    margin: 0 10%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    text-shadow: var(--text-shadow_light);
+}
+
+.home_contact {
+    margin-top: -10px;
+}
+
+.home_contact_address, .home_contact_phone {
+    display: inline-block;
+    padding: 0 3%;
+    text-transform: uppercase;
+    font-family: var(--sans);
+    text-shadow: var(--text-shadow_light);
+    vertical-align: top;
+}
+
+.home_contact_address {
+    font-size: 22px;
+    font-weight: 500;
+    color: #002080;
+}
+
+.home_contact_phone {
+    font-size: 30px;
+    font-weight: 600;
+    color: #A81F09;
+}
+
+.home_hours {
+    width: 80%;
+    text-shadow: var(--text-shadow_dark);
+    color: #FFC04D;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.home_hours_open {
+    font-family: var(--deco);
+    font-size: 40px;
+    color: #F7F4E6;
+    position: relative;
+    left: -40%;
+    transform: rotateZ(-10deg);
+}
+
+.home_hours_days {
+    padding: 5px 0 12px 0;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    margin: -12px auto 12px auto;
+}
+
+.home_hours_column {
+    font-family: var(--sans);
+    display: inline-block;
+    width: 48%;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFC04D;
+    line-height: 1.35em;
+}
+
+.home_hours_am-pm {
+    font-size: 16px;
+}
+
+.home_hours_closed {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    margin-top: 0.6em;
+}
+
+.pricing {
+    padding-right: 10px;
+}
+
+.parking {
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    background-image: url(/images/uploads/starburst.svg);
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: var(--serif);
+    font-style: italic;
+    transform: rotateZ(-16deg);
+    padding-top: 22px;
+    position: relative;
+    left: 25px;
+    z-index: 50;
+    vertical-align: top;
+}
+
+.pricing_board {
+    display: inline-block;
+    width: 45%;
+    min-width: 185px; 
+    padding: 15px 20px 30px 20px;
+    background-image: url(/images/uploads/painted-board.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    z-index: 40;
+}
+
+.pricing_cash {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 500;
+    color: #A81F09;
+    margin-bottom: 10px;
+}
+
+.pricing_list {
+    list-style: none;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: #002080;
+    display: block;
+    margin: 0 auto;
+    border-top: solid 2px #A81F09;
+    border-bottom: solid 2px #A81F09;
+    padding: 10px 0 20px 0;
+}
+
+.pricing_list li {
+    height: 16px;
+}
+
+.pricing_line {
+    text-align: left;
+    display: block;
+    margin-top: -16px;
+}
+
+.pricing_line :first-child {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.pricing_ellipsis {
+    border-bottom: dotted 2px #002080;
+    clear: both;
+}
+
+.pricing_line :nth-child(2) {
+    background: #fff; 
+    float: right;
+    text-align: right;
+}
+
+.pricing_item {
+    display: inline-block;
+    background: #fff; 
+    z-index: 100;
+    padding: 0 5px;
+}
+
+.home_content {
+    grid-area: content;
+}
+
+.home_pic {
+    display: block;
+    width: 96%;
+    margin: 30px auto 0 auto;
+    border: solid 4px #DBD3B8;
+    box-shadow: 0 2px 5px #63401C;
+}
+
+.shield {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    top: -45px;
+}
+
+.shield img {
+    object-fit: fill;
+    width: 100%;
+    max-height: 360px;
+}
+
+.home_intro {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: #291C11;
+    text-align: center;
+    line-height: 1.5;
+    padding: 7%;
+    position:absolute;
+    top: 0;
+}
+
+.home_intro p {
+    margin-bottom: 0.75em;
+}
+
+.emphasis {
+    font-style: italic;
+    font-size: 1.05em;
+}
+
+/* ===== NAVBAR ===== */
+
+.subnav {
+    height: 42px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-family: var(--sans);
+    font-size: 18px;
+    box-shadow: 0 2px 8px #352e29;
+    position: fixed;
+    top: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 8px 25px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav_main {
+    background: #0D0D0C;
+    grid-area: sitenav;
+    width: 35%;
+    max-width: 540px;
+    z-index: 100;
+}
+
+.nav_social {
+    background: #426663;
+    grid-area: socialnav;
+    width: 87%;
+    max-width: 1400px;
+    padding-left: 35%;
+    z-index: 90;
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    max-width: 1400px;
+    height: 55px;
+    font-family: var(--deco);
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+    padding: 12px 25px;
+    z-index: 200;
+    border-top: solid 1px #291C11;
+    background-image: url(/images/uploads/leather.jpg);
+    background-size: cover;
+    position: relative;
+    top: 30px;
+}
+
+/* ===== MEDIA QUERIES =====  */
+
+@media (min-width: 1500px) {
+    .nav_social {
+        padding-left: 550px;
+    }
+}
+
+@media (max-width: 1375px) {
+    .tagline {
+        top: 23%;
+        font-size: 27px;
+    }
+    .home_intro {
+        font-size: 16px;
+    }
+    .home_contact_address {
+        font-size: 20px;
+        padding: 0;
+    }
+    .home_contact_phone {
+        margin-left: 10px;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .page_container {
+        width: 97%;
+    }
+    .nav_main {
+        width: 39%;
+    }
+    .nav_social {
+        width: 97%;
+        padding-left: 39%;
+    }
+    .logo-container {
+        margin-top: 10px;
+    }
+    .tagline {
+        font-size: 26px;
+    }
+    .pricing_list {
+        font-size: 17px;
+    }
+    .home_hours_column {
+        font-size: 19px;
+    }
+    .home_hours_am-pm {
+        font-size: 14px;
+    }
+    .home_hours_closed {
+        font-size: 15px;
+    }
+    .home_hours_open {
+        left: -35%;
+    }
+    .shield img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .tagline {
+        font-size: 24px;
+        top: 22%;
+    }
+    .home_contact_address {
+        font-size: 18px;
+    }
+    .home_contact_phone {
+        font-size: 24px;
+        margin: 0;
+    }
+    .home_intro {
+        line-height: 1.25em;
+    }
+    .shield {
+       top: -35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .tagline {
+        font-size: 20px;
+    }
+    .home_contact_address {
+        font-size: 16px;
+    }
+    .home_contact_phone {
+        font-size: 22px;
+    }
+    .home_hours {
+        width: 95%;
+    }
+    .parking {
+        transform: rotateZ(-16deg) scale(0.85);
+    }
+    .pricing_board {
+        min-width: 155px;
+        padding: 5px 10px 15px 10px;
+    }
+    .pricing_list {
+        font-size: 16px;
+    }
+    .home_intro {
+        font-size: 14px;
+        padding-top: 10%;
+        line-height: 1.3em;
+    }
+}
+
+@media (max-width: 800px) {
+    .tagline {
+        top: 20%;
+        font-size: 18px;
+    }
+    .home_hours_column {
+        font-size: 17px;
+    }
+    .home_hours_open {
+        font-size: 32px;
+        margin-left: -10px;
+    }
+    .parking {
+       margin-left: -15%;
+    }
+    .home_intro {
+        padding-top: 9%;
+        line-height: 1.2em;
+    }
+    .shield {
+        top: 10px;
+    }
+    .shield img {
+        height: 305px;
+    }
+}
+
+@media (max-width: 650px) {
+    .page_container {
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'nav'
+        'info'
+        'content'
+        'footer';
+        padding-bottom: 0;
+    }
+    .home_page_container {
+        background-image: url(/images/uploads/plaster-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: top;
+    }
+    .home_shop-info {
+        grid-area: info;
+        width: 100%;
+        margin: 0 auto;
+        top: 45px;
+    }
+    .tagline {
+        top: 27%;
+    }
+    .home_contact_address {
+        font-size: 22px;
+    }    
+    .home_contact_phone {
+        font-size: 30px;
+    }
+    .home_content {
+        grid-area: content;
+        margin: -30px 0;
+    }
+    .subnav {
+        width: 100%;
+        grid-area: nav;
+        left: 0;
+    }
+    nav li {
+        margin: 8px 30px;
+    }
+    .nav_main {
+        max-width: none;
+        box-shadow: none;
+    }
+    .nav_social {
+        top: 40px;
+        padding: 0;
+        text-align: center;
+    }
+    footer {
+        top: 0;
+    }
+    .tagline {
+        font-size: 30px;
+    }
+    .home_shop-info {
+        justify-content: space-around;
+    }
+    .pricing_board {
+        padding: 15px 20px 30px 20px;
+        max-width: 215px;
+    }
+    .home_hours {
+        width: 90%;
+    }
+    
+    .home_hours_open {
+        font-size: 37px;
+        left: -40%;
+    }
+    
+    .home_hours_column {
+        width: 48%;
+        font-size: 22px;
+    }
+    
+    .home_hours_am-pm {
+        font-size: 16px;
+    }
+    
+    .home_hours_closed {
+        font-size: 17px;
+    }
+
+    .parking {
+        transform: rotateZ(-10deg);
+        left: 25px;
+    }
+    
+    .pricing_board {
+        width: 45%;
+        min-width: 185px; 
+        padding: 15px 20px 30px 20px;
+        top: 0;
+        left: 0;
+    }
+    
+    .shield {
+        top: -45px;
+    }
+    .shield img {
+        max-height: none;
+        height: 385px;
+    }
+    .home_intro {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 500px) {
+    .tagline {
+        top: 24%;
+        font-size: 25px;
+    }
+    .home_intro {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .home_shop-info {
+        top: 20px;
+    }
+    .tagline {
+        top: 23%;
+        font-size: 24px;
+    }
+    .home_shop-info {
+        margin-top: 25px;
+    }
+    .shield {
+        width: 95%;
+    }
+}
+
+@media (max-width: 375px) {   
+    .tagline {
+        top: 21%;
+        font-size: 22px;
+    }
+    .home_contact_address {
+        font-size: 18px;
+    }
+    .home_contact_phone {
+        font-size: 24px;
+    }
+    .home_hours_column {
+        font-size: 18px;
+    }
+    .home_hours_closed {
+        font-size: 15px;
+    }
+    .home_intro {
+        font-size: 15px;
+    }
+}
+
+
+
+

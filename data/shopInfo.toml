@@ -1,0 +1,13 @@
+tagline = "Quality Haircuts & Hot Towel Shaves"
+streetAddress = "711 N Monroe St"
+phone = "509-808-1959"
+weekdayOpen = "10"
+weekdayClose = "6"
+saturdayOpen = "10"
+saturdayClose = "4"
+[pricing]
+1 = ["haircut", "$19"]
+2 = ["buzzcut", "$13"]
+3 = ["shave", "$23"]
+4 = ["beard trim", "$7"]
+5 = ["line up", "$7"]

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Indy's Barbershop</title>
+    <meta name="description" content="Indy's Barbershop, a traditional barbershop in Spokane, WA">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700, 900|Oswald:400,500,600|Yesteryear" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="page_container home_page_container">
+        {{ partial "navbar.html" . }}
+
+        <div class="home_shop-info">
+            <div class="logo-container">
+                <img class="cartouche" src="/images/uploads/cartouche-w-lettering.svg">
+                <div class="logo-text">
+                    <h1 class="home_biz-name">Indy's Barbershop</h1>
+                    <h2 class="tagline">{{.Site.Data.shopInfo.tagline}}</h2>
+                </div>
+            </div>
+
+
+            <div class="home_contact">
+                <div class="home_contact_address">
+                    <div>{{.Site.Data.shopInfo.streetAddress}}</div>
+                    <div>Spokane, Washington</div>
+                </div>
+                <div class="home_contact_phone">{{.Site.Data.shopInfo.phone}}</div>
+            </div>
+
+            <section class="home_hours">
+                <p class="home_hours_open">Open:</p>
+                <div class="home_hours_days">
+                    <div class="home_hours_column">
+                        <p>Tuesday - Friday:</p>
+                        <p>{{.Site.Data.shopInfo.weekdayOpen}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Site.Data.shopInfo.weekdayClose}}
+                            <span class="home_hours_am-pm">P.M.</span>
+                        </p>
+                    </div>
+                    <div class="home_hours_column">
+                        <p>Saturday:</p>
+                        <p>{{.Site.Data.shopInfo.saturdayOpen}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Site.Data.shopInfo.saturdayClose}}
+                            <span class="home_hours_am-pm">P.M.</span>
+                        </p>
+                    </div>
+                    <p class="home_hours_closed">closed Sunday &amp; Monday</p>
+                </div>
+            </section>
+            <section class="pricing">
+                <aside class="parking">FREE PARKING in Back!</aside>
+                <div class="pricing_board">
+                    <p class="pricing_cash">CASH ONLY</p>
+                    <ul class="pricing_list">
+                        {{ range $service := .Site.Data.shopInfo.pricing }}
+                        <li class="pricing_ellipsis"></li>
+                        <li class="pricing_line">
+                            {{range $value := $service }}
+                            <div class=pricing_item>{{$value}}</div>
+                            {{end}}
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="home_content">
+            <img class="home_pic" src="images/uploads/billiards.jpg">
+            <div class="shield">
+                <img src="images/uploads/shield.png" />
+                <section class="home_intro">
+                    <!-- Will need to make this text editable -->
+                    <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls in the
+                        historic late-1880’s Dresden building. We offer quality haircuts and fades, hot-towel straight-razor
+                        shaves, and beard trims.
+                    </p>
+                    <p>Get a haircut or hot-towel shave at an affordable price, check out the antique decor, play a game of
+                        billiards, have some good conversation, and enjoy your time with us!</p>
+                    <p class="emphasis">No appointment necessary. You're next!</p>
+                </section>
+            </div>
+        </div>
+
+        <footer>Look Good, Feel Good</footer>
+
+    </div>
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>
