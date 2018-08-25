@@ -1,3 +1,13 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Indy's Barbershop website"
+
+[[menu.nav]]
+    name = "home"
+    url = "/"
+    weight = 1
+
+[[menu.nav]] 
+    name = "gallery"
+    url = "/gallery"
+    weight = 2

@@ -5,9 +5,8 @@
 }
 
 :root {
-    --shadow: 3px 4px 10px #534940,
-            inset 3px 5px 8px #534940;
-    --text-shadow_dark: 2px 2px 2px #281a0b;
+    --shadow: 3px 4px 10px #534940, inset 3px 5px 8px #534940;
+    --text-shadow_dark: 2px 2px 8px #281a0b, -2px -1px 8px #281a0b;
     --text-shadow_light: -3px 1px 20px #fff;
     --sans: 'Oswald', sans-serif;
     --serif: 'Merriweather', serif;
@@ -18,24 +17,19 @@ body {
     background: #736D5C;
 }
 
-.page_container {
+.page-container {
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 40px auto auto 45px;
-    grid-template-areas:
-        'sitenav socialnav'
-        'info content'
-        'info content'
-        'footer footer';
     width: 87%;
     max-width: 1400px;
     margin: 0 auto;
-    padding-bottom: 30px;
     border: solid 1px #8b8676;
     box-shadow: 3px 3px 8px #291C11;
 }
 
-.home_page_container {
+.page-container_home {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 40px auto auto 45px;
+    grid-template-areas: 'sitenav socialnav' 'info content' 'info content' 'footer footer';
     background-image: url(/images/uploads/wainscot-background.jpg), url(/images/uploads/plaster-background.jpg);
     background-size: 35% 57%, 100% 100%;
     background-repeat: repeat-x, no-repeat;
@@ -52,7 +46,7 @@ body {
     text-align: center;
 }
 
-.home_shop-info > * {
+.home_shop-info>* {
     width: 100%;
 }
 
@@ -79,7 +73,8 @@ body {
     margin-top: -10px;
 }
 
-.home_contact_address, .home_contact_phone {
+.home_contact_address,
+.home_contact_phone {
     display: inline-block;
     padding: 0 3%;
     text-transform: uppercase;
@@ -112,8 +107,8 @@ body {
     font-family: var(--deco);
     font-size: 40px;
     color: #F7F4E6;
-    position: relative;
-    left: -40%;
+    display: inline-block;
+    margin-right: 100%;
     transform: rotateZ(-10deg);
 }
 
@@ -169,14 +164,13 @@ body {
 .pricing_board {
     display: inline-block;
     width: 45%;
-    min-width: 185px; 
+    min-width: 185px;
     padding: 15px 20px 30px 20px;
     background-image: url(/images/uploads/painted-board.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
     border-radius: 20px;
-    position: relative;
     z-index: 40;
 }
 
@@ -222,14 +216,14 @@ body {
 }
 
 .pricing_line :nth-child(2) {
-    background: #fff; 
+    background: #fff;
     float: right;
     text-align: right;
 }
 
 .pricing_item {
     display: inline-block;
-    background: #fff; 
+    background: #fff;
     z-index: 100;
     padding: 0 5px;
 }
@@ -266,7 +260,7 @@ body {
     text-align: center;
     line-height: 1.5;
     padding: 7%;
-    position:absolute;
+    position: absolute;
     top: 0;
 }
 
@@ -324,9 +318,8 @@ footer {
     width: 100%;
     max-width: 1400px;
     height: 55px;
-    font-family: var(--deco);
     font-size: 24px;
-    text-align: right;
+    text-align: center;
     color: #fff;
     padding: 12px 25px;
     z-index: 200;
@@ -334,8 +327,71 @@ footer {
     background-image: url(/images/uploads/leather.jpg);
     background-size: cover;
     position: relative;
-    top: 30px;
+    top: -10px;
 }
+
+.footer_screen, .footer_home {
+    font-family: var(--deco);
+    text-align: right;
+}
+
+.footer_mobile {
+    display: none;
+}
+
+.footer_mobile div {
+    display: inline;
+    margin: 0 5%;
+}
+
+
+/* ===== GALLERY PAGE =====  */
+
+.page-container_gallery {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 40px auto auto 45px;
+    grid-template-areas: 'sitenav socialnav' 'logo header''content content' 'footer footer';
+    background-image: url(/images/uploads/plaster-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+    min-height: 1000px;
+}
+
+.gallery_header {
+    grid-area: header;
+    display: block;
+    /* height: 25px; */
+    width: 95%;
+    margin: 10px auto;
+    border: solid 1px pink;
+}
+
+.gallery_content {
+    grid-area: content;
+    width: 97%;   
+    margin: 50px auto;
+}
+
+.gallery_container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery_thumbnail {
+    display: inline-block;
+    margin: 10px;
+    border: solid 4px #f6f4ee;
+}
+
+
+
+
+
+
 
 /* ===== MEDIA QUERIES =====  */
 
@@ -364,7 +420,7 @@ footer {
 }
 
 @media (max-width: 1225px) {
-    .page_container {
+    .page-container_home {
         width: 97%;
     }
     .nav_main {
@@ -392,9 +448,6 @@ footer {
     .home_hours_closed {
         font-size: 15px;
     }
-    .home_hours_open {
-        left: -35%;
-    }
     .shield img {
         height: 350px;
     }
@@ -416,7 +469,7 @@ footer {
         line-height: 1.25em;
     }
     .shield {
-       top: -35px;
+        top: -35px;
     }
 }
 
@@ -460,10 +513,10 @@ footer {
     }
     .home_hours_open {
         font-size: 32px;
-        margin-left: -10px;
+        margin-right: 90%;
     }
     .parking {
-       margin-left: -15%;
+        margin-left: -15%;
     }
     .home_intro {
         padding-top: 9%;
@@ -478,16 +531,10 @@ footer {
 }
 
 @media (max-width: 650px) {
-    .page_container {
+    .page-container_home {
         grid-template-columns: 100%;
-        grid-template-areas:
-        'nav'
-        'info'
-        'content'
-        'footer';
+        grid-template-areas: 'nav' 'info' 'content' 'footer';
         padding-bottom: 0;
-    }
-    .home_page_container {
         background-image: url(/images/uploads/plaster-mobile.jpg);
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -504,7 +551,7 @@ footer {
     }
     .home_contact_address {
         font-size: 22px;
-    }    
+    }
     .home_contact_phone {
         font-size: 30px;
     }
@@ -529,8 +576,14 @@ footer {
         padding: 0;
         text-align: center;
     }
-    footer {
-        top: 0;
+    .footer_home {
+        text-align: center;
+    }
+    .footer_screen {
+        display: none;
+    }
+    .footer_mobile {
+        display: block;
     }
     .tagline {
         font-size: 30px;
@@ -542,41 +595,36 @@ footer {
         padding: 15px 20px 30px 20px;
         max-width: 215px;
     }
+    .pricing_list {
+        font-size: 18px;
+    }
     .home_hours {
         width: 90%;
     }
-    
     .home_hours_open {
         font-size: 37px;
-        left: -40%;
     }
-    
     .home_hours_column {
         width: 48%;
-        font-size: 22px;
+        font-size: 24px;
     }
-    
     .home_hours_am-pm {
-        font-size: 16px;
+        font-size: 18px;
     }
-    
     .home_hours_closed {
-        font-size: 17px;
+        font-size: 18px;
     }
-
     .parking {
         transform: rotateZ(-10deg);
         left: 25px;
     }
-    
     .pricing_board {
         width: 45%;
-        min-width: 185px; 
+        min-width: 185px;
         padding: 15px 20px 30px 20px;
         top: 0;
         left: 0;
     }
-    
     .shield {
         top: -45px;
     }
@@ -607,6 +655,9 @@ footer {
         top: 23%;
         font-size: 24px;
     }
+    .pricing_list {
+        font-size: 17px;
+    }
     .home_shop-info {
         margin-top: 25px;
     }
@@ -615,7 +666,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {   
+@media (max-width: 375px) {
     .tagline {
         top: 21%;
         font-size: 22px;
@@ -636,7 +687,3 @@ footer {
         font-size: 15px;
     }
 }
-
-
-
-
