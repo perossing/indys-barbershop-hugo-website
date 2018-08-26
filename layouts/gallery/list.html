@@ -1,0 +1,32 @@
+{{ partial "head.html" . }}
+
+<body>
+
+    <div class="page-container page-container_gallery">
+        {{ partial "navbar.html" . }}
+        <img class="window-logo" src="/images/uploads/window-logo.png">
+        <section class="gallery_header">
+
+            <div class="contact_address">
+                <div>{{.Site.Data.shopInfo.streetAddress}}</div>
+                <div>Spokane, Washington</div>
+            </div>
+            <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
+
+            <p class="gallery_blurb">{{.Site.Data.shopInfo.galleryBlurb}}</p>
+        </section>
+        <div class="gallery_content">
+            <ul class="gallery_container">
+                {{range .Pages}}
+                <li>
+                    <img class="gallery_thumbnail" src="{{.Params.thumbnail}}" alt="{{.Title}}" />
+                </li>
+                {{end}}
+            </ul>
+        </div>
+        <footer class="footer_home">Look Good, Feel Good</footer>
+    </div>
+
+</body>
+
+</html>

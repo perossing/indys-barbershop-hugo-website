@@ -6,20 +6,18 @@
         {{ partial "navbar.html" . }}
 
         <div class="home_shop-info">
-            <div class="logo-container">
-                <img class="cartouche" src="/images/uploads/cartouche-w-lettering.svg">
-                <div class="logo-text">
-                    <h1 class="home_biz-name">Indy's Barbershop</h1>
-                    <h2 class="tagline">{{.Site.Data.shopInfo.tagline}}</h2>
-                </div>
+            <img class="cartouche" src="/images/uploads/cartouche-logo.png">
+            <div class="logo-text">
+                <h1 class="home_biz-name">Indy's Barbershop</h1>
+                <h2 class="tagline">{{.Site.Data.shopInfo.tagline}}</h2>
             </div>
 
             <div class="home_contact">
-                <div class="home_contact_address">
+                <div class="contact_address">
                     <div>{{.Site.Data.shopInfo.streetAddress}}</div>
                     <div>Spokane, Washington</div>
                 </div>
-                <div class="home_contact_phone">{{.Site.Data.shopInfo.phone}}</div>
+                <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
             </div>
 
             <section class="home_hours">
