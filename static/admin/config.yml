@@ -33,16 +33,6 @@ collections:
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
 
-  - label: "Services and Pricing"
-    name: "services"
-    folder: "content/services"
-    create: true
-    fields:
-      - {label: "service", name: "service", widget: "string"}
-      - {label: "price (include '$' before number)", name: "price", widget: "string"}
-      - {label: "order", name: "weight", widget: "number"}
-      - {label: "type", name: "type", widget: "hidden", default: "service"}
-      
   - label: "Gallery"
     name: "gallery"
     folder: "content/gallery"
