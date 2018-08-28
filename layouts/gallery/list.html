@@ -33,14 +33,14 @@
                             <p class="gallery_caption">{{.Params.description}}</p>
                             <div class="gallery_nav">
                                 <ul>
-                                    <li>
+                                    <li class="gallery_nav_btn">
                                         {{if .Prev}}
-                                        <a href="#{{.Prev.Title | urlize }}" class="gallery_prev">prev</a>
+                                        <a href="#{{.Prev.Title | urlize }}" >prev</a>
                                         {{end}}
                                     </li>
-                                    <li>
+                                    <li class="gallery_nav_btn">
                                         {{if .Next}}
-                                        <a href="#{{ .Next.Title | urlize}}" class="gallery_next">next</a>
+                                        <a href="#{{ .Next.Title | urlize}}">next</a>
                                         {{end}}
                                     </li>
                                 </ul>

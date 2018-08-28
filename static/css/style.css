@@ -467,19 +467,20 @@ footer {
     text-shadow: var(--text-shadow_dark);
 }
 
-.gallery_nav li {
+.gallery_nav_btn {
     display: inline-block;
     margin: 5px 90px;
+    width: 90px;
 }
 
 .gallery_nav a {
     display: inline-block;
+    width: 100%;
     color: #fff;
     text-decoration: none;
     padding-bottom: 2px;
     background: #426663;
     box-shadow: 1px 2px 10px #291C11;
-    width: 90px;
     border-radius: 2px;
 }
 
@@ -694,43 +695,16 @@ footer {
         font-size: 15px;
         width: 95%;
     }
-    .gallery_nav li {
-        display: inline-block;
-        margin: 5px 50px;
-    }
-    
-    .gallery_nav a {
-        display: inline-block;
+    .gallery_nav_btn {
         width: 60px;
+        margin: 5px 50px;
+    }    
+    .gallery_nav a {
         border-radius: 2px;
     }
     #gallery_close {
         width: 70px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .home_shop-info {
         grid-area: info;
         width: 100%;
@@ -850,6 +824,9 @@ footer {
     .shield {
         width: 95%;
     }
+    .gallery_overlay:target {
+        padding-bottom: 125px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -871,5 +848,17 @@ footer {
     }
     .home_intro {
         font-size: 15px;
+    }
+    .gallery_caption {
+        margin-bottom: 5px;
+    }
+    .gallery_nav_btn {
+        font-size: 12px;
+        margin: 5px 35px;
+        width: 40px;
+    }
+    #gallery_close {
+        width: 45px;
+        font-size: 12px;
     }
 }
