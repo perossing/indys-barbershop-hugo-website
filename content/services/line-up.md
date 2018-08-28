@@ -1,5 +1,5 @@
 ---
-service: Line up
+title: Line up
 price: $7
 type: service
 weight: 5
