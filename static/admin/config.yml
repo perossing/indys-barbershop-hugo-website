@@ -10,8 +10,8 @@ public_folder: "/images/uploads"
 
 collections:
 
-  - name: pages
-    label: "Shop Info and Gallery intro"
+  - label: "Shop Info and Gallery intro"
+    name: "pages"
     files:
       - file: "content/shop.md"
         label: "Shop Info"
@@ -31,23 +31,20 @@ collections:
         name: "gallery"
         create: false
         fields:
-          - {label: "Body", name: "body", widget: "markdown"} 
+          - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: services
-    label: "Services and Pricing"
+  - label: "Services and Pricing"
+    name: "services"
     folder: "content/services"
-    files:
-      - name: "services"
-        label: "Services"
-        create: true
-        fields:
-          - {label: "service", name: "service", widget: "string"}
-          - {label: "price (include '$' before number )", name: "price", widget: "string"}
-          - {label: "order", name: "weight", widget: "number"}
-          - {label: "type", name: "type", widget: "hidden", default: "service"}
-
-  - name: gallery
-    label: "Gallery"
+    create: true
+    fields:
+      - {label: "service", name: "service", widget: "string"}
+      - {label: "price (include '$' before number)", name: "price", widget: "string"}
+      - {label: "order", name: "weight", widget: "number"}
+      - {label: "type", name: "type", widget: "hidden", default: "service"}
+      
+  - label: "Gallery"
+    name: "gallery"
     folder: "content/gallery"
     create: true
     fields:
