@@ -5,7 +5,7 @@ weekdayOpen = "10"
 weekdayClose = "6"
 saturdayOpen = "10"
 saturdayClose = "4"
-galleryBlurb ="This is some text about the pictures on the Gallery Page"
+galleryBlurb ="THIS PAGE IS IN PROGRESS...This is some text about the pictures on the Gallery Page..."
 [pricing]
 1 = ["haircut", "$19"]
 2 = ["buzzcut", "$13"]

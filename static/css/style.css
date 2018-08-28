@@ -14,7 +14,10 @@
 }
 
 body {
-    background: #736D5C;
+    background-image: linear-gradient(#736D5C, #291C11);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .page-container {
@@ -321,23 +324,17 @@ footer {
     max-width: 1400px;
     height: 55px;
     font-size: 24px;
-    text-align: center;
+    font-family: var(--deco);
+    text-align: right;
     color: #fff;
     padding: 12px 25px;
     z-index: 200;
     border-top: solid 1px #291C11;
     background-image: url(/images/uploads/leather.jpg);
     background-size: cover;
-    /* position: relative;
-    top: -10px; */
+    position: relative;
+    top: -10px;
 }
-
-footer {
-    font-family: var(--deco);
-    text-align: right;
-}
-
-
 
 /* ===== GALLERY PAGE =====  */
 
@@ -375,7 +372,7 @@ footer {
 
 .gallery_content {
     grid-area: content;
-    width: 97%;   
+    width: 97%;
     margin: 0 auto;
 }
 
@@ -388,17 +385,130 @@ footer {
 }
 
 .gallery_thumbnail {
+    position: relative;
+}
+
+.gallery_thumbnail_link {
     margin: 15px;
     margin-top: 0;
     height: 195px;
     width: 200px;
     border: solid 4px #f6f4ee;
     box-shadow: 0 2px 15px #63401C;
+    display: block;
+    position: relative;
 }
 
+.gallery_thumbnail_overlay {
+    font-family: var(--sans);
+    font-weight: 400;
+	position: absolute;
+    height: 195px;
+    width: 200px;
+	top: 0;
+	left: 15px;
+	text-align: center;
+	color: #fff;
+	text-shadow: var(--text-shadow_dark);
+    font-size: 20px;
+    padding: 25% 10% 0 10%;
+	opacity: 0;
+    background-image: linear-gradient(to bottom right, rgba(99, 64, 28, 0.2), rgba(99, 64, 28, 0.9));
+	transition: opacity 0.3s ease-in;
+}
+.gallery_thumbnail_overlay:hover {
+	opacity: 1;
+}
 
+.gallery_overlay{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+    z-index: 500;
+    text-align: center;
+    background: rgba(41, 28, 17, 0.75);
+}
 
+.gallery_pic-info {
+    width: 95%;
+    margin: 0 auto;
+}
 
+.gallery_caption {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: #f6f4ee;
+    text-shadow: var(--text-shadow_dark);
+	font-size: 17px;
+    line-height: 1.5em;
+    width: 75%;
+    margin: 0 auto 15px auto;
+}
+
+.gallery_overlay img {
+	max-height: 100%;
+    max-width: 90%;
+	opacity: 0;
+    border: solid 4px #c1b48a;
+    box-shadow: 2px 3px 20px #291C11;
+    position: relative;
+    top: -10px;
+    transition: opacity 0.5s linear;
+}
+
+.gallery_nav {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    text-shadow: var(--text-shadow_dark);
+}
+
+.gallery_nav li {
+    display: inline-block;
+    margin: 5px 90px;
+}
+
+.gallery_nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 2px;
+    background: #426663;
+    box-shadow: 1px 2px 10px #291C11;
+    width: 90px;
+    border-radius: 2px;
+}
+
+.gallery_nav  a:hover, #gallery_close:hover {
+    color: #FFC04D;
+}
+
+#gallery_close {
+    color: #fff;
+    background: #63401C;
+    opacity: 0.8;
+    width: 120px;
+    position: relative;
+    top: -28px;
+}
+
+.gallery_overlay:target {
+    width: 87%;
+    max-width: 1400px;
+    height: auto;
+	bottom: 0px;
+	right: 0px;
+    padding: 65px 0 100px 0;
+    margin: 0 auto;
+}
+
+.gallery_overlay:target img {
+	opacity: 1;
+}
 
 
 /* ===== MEDIA QUERIES =====  */
@@ -428,7 +538,8 @@ footer {
 }
 
 @media (max-width: 1225px) {
-    .page-container_home, .page-container_gallery {
+    .page-container_home,
+    .page-container_gallery {
         width: 97%;
     }
     .nav_main {
@@ -458,6 +569,9 @@ footer {
     }
     .shield img {
         height: 350px;
+    }
+    .gallery_overlay:target {
+        width: 97%;
     }
 }
 
@@ -539,33 +653,26 @@ footer {
 }
 
 @media (max-width: 650px) {
-    .page-container_home {
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: 'nav' 'info' 'content' 'footer';
-        padding-bottom: 0;
-        background-image: url(/images/uploads/plaster-mobile.jpg);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: top;
-    }
-
+    .page-container_home,
     .page-container_gallery {
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: 'nav' 'logo' 'header' 'content' 'footer';
         padding-bottom: 0;
         background-image: url(/images/uploads/plaster-mobile.jpg);
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: top;
     }
-
+    .page-container_home {
+        grid-template-areas: 'nav' 'info' 'content' 'footer';
+    }
+    .page-container_gallery {
+        grid-template-areas: 'nav' 'logo' 'header' 'content' 'footer';
+    }
     .window-logo {
         grid-area: logo;
         margin-top: 100px;
     }
-
     .gallery_header {
         width: 98%;
         text-align: center;
@@ -575,10 +682,54 @@ footer {
         width: 95%;
         margin: 30px auto;
     }
-
     .gallery_content {
         margin-top: 10px;
     }
+    .gallery_overlay:target {
+        width: 100%;
+        padding: 50px 0 100px 0;
+    }
+    .gallery_caption {
+        color: #f6f4ee;
+        font-size: 15px;
+        width: 95%;
+    }
+    .gallery_nav li {
+        display: inline-block;
+        margin: 5px 50px;
+    }
+    
+    .gallery_nav a {
+        display: inline-block;
+        width: 60px;
+        border-radius: 2px;
+    }
+    #gallery_close {
+        width: 70px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .home_shop-info {
         grid-area: info;
@@ -618,6 +769,7 @@ footer {
     }
     footer {
         text-align: center;
+        top: 0;
     }
     .tagline {
         font-size: 30px;

@@ -1,3 +1,5 @@
+<!-- Gallery Page -->
+
 {{ partial "head.html" . }}
 
 <body>
@@ -6,22 +8,53 @@
         {{ partial "navbar.html" . }}
         <img class="window-logo" src="/images/uploads/window-logo.png">
         <section class="gallery_header">
-
             <div class="contact_address">
                 <div>{{.Site.Data.shopInfo.streetAddress}}</div>
                 <div>Spokane, Washington</div>
             </div>
             <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
-
             <p class="gallery_blurb">{{.Site.Data.shopInfo.galleryBlurb}}</p>
         </section>
+
         <div class="gallery_content">
             <ul class="gallery_container">
+
                 {{range .Pages}}
-                <li>
-                    <img class="gallery_thumbnail" src="{{.Params.thumbnail}}" alt="{{.Title}}" />
+
+                <li class="gallery_thumbnail">
+                    <a href="#{{ urlize .Title}}">
+                        <img class="gallery_thumbnail_link" src="{{.Params.thumbnail}}" alt="{{.Title}}" />
+                        <span class="gallery_thumbnail_overlay">{{.Title}}</span>
+                    </a>
+
+                    <div class="gallery_overlay" id="{{urlize .Title}}">
+                        <img src="{{.Params.image}}" alt="{{.Title}}" />
+                        <div class="gallery_pic-info">
+                            <p class="gallery_caption">{{.Params.description}}</p>
+                            <div class="gallery_nav">
+                                <ul>
+                                    <li>
+                                        {{if .Prev}}
+                                        <a href="#{{.Prev.Title | urlize }}" class="gallery_prev">prev</a>
+                                        {{end}}
+                                    </li>
+                                    <li>
+                                        {{if .Next}}
+                                        <a href="#{{ .Next.Title | urlize}}" class="gallery_next">next</a>
+                                        {{end}}
+                                    </li>
+                                </ul>
+                                <a href="/gallery" id="gallery_close">close</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </li>
+
                 {{end}}
+
             </ul>
         </div>
         <footer class="footer_home">Look Good, Feel Good</footer>
