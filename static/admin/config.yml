@@ -37,7 +37,7 @@ collections:
     label: "Services and Pricing"
     folder: "content/services"
     files:
-      -name: "services"
+      - name: "services"
         label: "Services"
         create: true
         fields:
