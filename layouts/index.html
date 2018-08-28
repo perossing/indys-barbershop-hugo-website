@@ -4,16 +4,12 @@
 <body>
 
     <div class="page-container page-container_home">
-        {{ partial "navbar.html" . }}
-
-        {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
-
-        {{ range $shopInfo}}
+        {{ partial "navbar.html" . }} {{ $shopInfo := where .Site.Pages ".Params.type" "info"}} {{ range $shopInfo}}
         <div class="home_shop-info">
             <img class="cartouche" src="/images/uploads/cartouche-logo.png">
             <div class="logo-text">
                 <h1 class="home_biz-name">Indy's Barbershop</h1>
-                
+
                 <h2 class="tagline">{{ .Params.tagline }}</h2>
             </div>
 
@@ -87,6 +83,7 @@
         <footer class="footer_home">Look Good, Feel Good</footer>
 
     </div>
+
 
 </body>
 
