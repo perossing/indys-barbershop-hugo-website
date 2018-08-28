@@ -5,10 +5,3 @@ weekdayOpen = "10"
 weekdayClose = "6"
 saturdayOpen = "10"
 saturdayClose = "4"
-galleryBlurb ="Check out these pictures of Indy's, then come on down and visit us in person!"
-[pricing]
-1 = ["haircut", "$19"]
-2 = ["buzzcut", "$13"]
-3 = ["shave", "$23"]
-4 = ["beard trim", "$7"]
-5 = ["line up", "$7"]

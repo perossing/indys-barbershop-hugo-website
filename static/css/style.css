@@ -201,36 +201,30 @@ body {
 }
 
 .pricing_list li {
-    height: 16px;
+    height: 20px;
 }
 
 .pricing_line {
     text-align: left;
     display: block;
-    margin-top: -16px;
+    margin-top: -20px;
 }
-
-.pricing_line :first-child {
-    text-align: left;
-    text-transform: capitalize;
-}
-
 .pricing_ellipsis {
     border-bottom: dotted 2px #002080;
     clear: both;
 }
 
-.pricing_line :nth-child(2) {
-    background: #fff;
-    float: right;
-    text-align: right;
+.pricing_service, .pricing_price {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) , rgba(255, 255, 255, 1) 90%);
+    text-align: left;
+    text-transform: capitalize;
+    padding: 0 4px;
+    z-index: 100;
 }
 
-.pricing_item {
-    display: inline-block;
-    background: #fff;
-    z-index: 100;
-    padding: 0 5px;
+.pricing_price {
+    float: right;
+    text-align: right;
 }
 
 .home_content {
@@ -361,13 +355,14 @@ footer {
     margin-top: 40px;
 }
 
-.gallery_blurb {
+.gallery_blurb p {
     font-family: var(--serif);
     font-size: 20px;
     color: #291C11;
     margin-top: 30px;
     width: 95%;
     height: 5em;
+    
 }
 
 .gallery_content {
@@ -539,8 +534,7 @@ footer {
 }
 
 @media (max-width: 1225px) {
-    .page-container_home,
-    .page-container_gallery {
+    .page-container {
         width: 97%;
     }
     .nav_main {
@@ -654,8 +648,7 @@ footer {
 }
 
 @media (max-width: 650px) {
-    .page-container_home,
-    .page-container_gallery {
+    .page-container {
         grid-template-columns: 100%;
         grid-template-rows: auto;
         padding-bottom: 0;
@@ -809,7 +802,7 @@ footer {
 
 @media (max-width: 450px) {
     .home_shop-info {
-        top: 20px;
+        top: 55px;
     }
     .tagline {
         top: 23%;

@@ -1,0 +1,7 @@
+---
+service: Haircut
+price: $19
+type: service
+weight: 1
+draft: false
+---

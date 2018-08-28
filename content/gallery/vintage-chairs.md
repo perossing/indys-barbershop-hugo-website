@@ -1,5 +1,5 @@
 ---
-title: Vintage barber chairs
+title: Have a seat!
 thumbnail: /images/uploads/thumbnails/chairs.jpg
 image: /images/uploads/chairs.jpg
 description: An authentic old-style barbershop atmosphere with the personal, friendly service you'd expect!

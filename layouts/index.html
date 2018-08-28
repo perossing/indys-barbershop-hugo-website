@@ -1,23 +1,28 @@
 {{ partial "head.html" . }}
 
+
 <body>
 
     <div class="page-container page-container_home">
         {{ partial "navbar.html" . }}
 
+        {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
+
+        {{ range $shopInfo}}
         <div class="home_shop-info">
             <img class="cartouche" src="/images/uploads/cartouche-logo.png">
             <div class="logo-text">
                 <h1 class="home_biz-name">Indy's Barbershop</h1>
-                <h2 class="tagline">{{.Site.Data.shopInfo.tagline}}</h2>
+                
+                <h2 class="tagline">{{ .Params.tagline }}</h2>
             </div>
 
             <div class="home_contact">
                 <div class="contact_address">
-                    <div>{{.Site.Data.shopInfo.streetAddress}}</div>
+                    <div>{{.Params.streetAddress}}</div>
                     <div>Spokane, Washington</div>
                 </div>
-                <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
+                <div class="contact_phone">{{.Params.phone}}</div>
             </div>
 
             <section class="home_hours">
@@ -25,32 +30,35 @@
                 <div class="home_hours_days">
                     <div class="home_hours_column">
                         <p>Tuesday - Friday:</p>
-                        <p>{{.Site.Data.shopInfo.weekdayOpen}}
-                            <span class="home_hours_am-pm">A.M. </span>to {{.Site.Data.shopInfo.weekdayClose}}
+                        <p>{{.Params.weekdayOpen}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.weekdayClose}}
                             <span class="home_hours_am-pm">P.M.</span>
                         </p>
                     </div>
                     <div class="home_hours_column">
                         <p>Saturday:</p>
-                        <p>{{.Site.Data.shopInfo.saturdayOpen}}
-                            <span class="home_hours_am-pm">A.M. </span>to {{.Site.Data.shopInfo.saturdayClose}}
+                        <p>{{.Params.saturdayOpen}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.saturdayClose}}
                             <span class="home_hours_am-pm">P.M.</span>
                         </p>
                     </div>
                     <p class="home_hours_closed">closed Sunday &amp; Monday</p>
                 </div>
             </section>
+            {{end}}
+
             <section class="pricing">
                 <aside class="parking">FREE PARKING in Back!</aside>
                 <div class="pricing_board">
                     <p class="pricing_cash">CASH ONLY</p>
                     <ul class="pricing_list">
-                        {{ range $service := .Site.Data.shopInfo.pricing }}
+                        {{ range where .Pages ".Params.type" "service"}}
                         <li class="pricing_ellipsis"></li>
                         <li class="pricing_line">
-                            {{range $value := $service }}
-                            <div class=pricing_item>{{$value}}</div>
-                            {{end}}
+                            <div>
+                                <span class="pricing_service">{{.Params.service}}</span>
+                                <span class="pricing_price">{{.Params.price}}</span>
+                            </div>
                         </li>
                         {{ end }}
                     </ul>

@@ -3,7 +3,7 @@ title: Not a hair out of place
 thumbnail: /images/uploads/thumbnails/precision.jpg
 image: /images/uploads/precision.jpg
 description: Attention to detail makes the difference.  You feel best when you look your best!
-weight: 8
+weight: 3
 ---
 
 

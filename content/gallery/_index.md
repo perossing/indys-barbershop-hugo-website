@@ -1,4 +1,1 @@
----
-blur: This is some text about the pictures in the gallery.
-type: gallery
----
+ Check out these pictures of Indy's, then come on down and visit us in person! *(click on thumbnails to see larger pictures)*
