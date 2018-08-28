@@ -34,7 +34,7 @@ collections:
 
   - name: services
     label: "Services and Pricing"
-    folder: "content/services/"
+    folder: "content/services/_services"
     create: true
     fields:
       - {label: "service", name: "service", widget: "string"}
