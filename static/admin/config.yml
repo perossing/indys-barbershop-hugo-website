@@ -27,7 +27,7 @@ collections:
           - {label: "type", name: "type", widget: "hidden"}
       - file: "content/gallery/_index.md"
         label: "Gallery Page intro paragraph"
-        # name: "gallery"
+        name: "gallery"
         create: false
         fields:
           - {label: "Body", name: "body", widget: "markdown"}      
