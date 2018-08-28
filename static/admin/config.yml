@@ -40,7 +40,7 @@ collections:
     fields:
       - {label: "service", name: "service", widget: "string"}
       - {label: "price", name: "price", widget: "string"}
-      - {label: "order", name: "weight", widget: "number"}]
+      - {label: "order", name: "weight", widget: "number"}
       - {label: "type", name: "type", widget: "hidden", default: "service"}
 
   - label: "Gallery"
