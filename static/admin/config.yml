@@ -31,23 +31,25 @@ collections:
         create: false
         fields:
           - {label: "Body", name: "body", widget: "markdown"} 
-  - name: "services"
-    label: "Services and Pricing"
-    folder: "content/services/_services"
-    create: true
-    fields:
-      - {label: "service", name: "service", widget: "string"}
-      - {label: "price (include '$' before number )", name: "price", widget: "string"}
-      - {label: "order", name: "weight", widget: "number"}
-      - {label: "type", name: "type", widget: "hidden", default: "service"}
-  - name: "gallery"
-    label: "Gallery"
-    folder: "content/gallery/_gallery"
-    create: true
-    fields:
-      - {label: "image title", name: "title", widget: "string"}
-      - {label: "thumbnail image (200px wide x 195px high)", name: "thumbnail", widget: "image"}
-      - {label: "full-page image", name: "image", widget: "image"}
-      - {label: "description", name: "description", widget: "text"}
-      - {label: "order", name: "weight", widget: "number"}
+
+    - name: "services"
+      label: "Services and Pricing"
+      folder: "content/services"
+      create: true
+      fields:
+        - {label: "service", name: "service", widget: "string"}
+        - {label: "price (include '$' before number )", name: "price", widget: "string"}
+        - {label: "order", name: "weight", widget: "number"}
+        - {label: "type", name: "type", widget: "hidden", default: "service"}
+
+    - name: "gallery"
+      label: "Gallery"
+      folder: "content/gallery"
+      create: true
+      fields:
+        - {label: "image title", name: "title", widget: "string"}
+        - {label: "thumbnail image (200px wide x 195px high)", name: "thumbnail", widget: "image"}
+        - {label: "full-page image", name: "image", widget: "image"}
+        - {label: "description", name: "description", widget: "text"}
+        - {label: "order", name: "weight", widget: "number"}
 
