@@ -33,7 +33,7 @@ body {
     grid-template-columns: 40% 60%;
     grid-template-rows: 40px auto auto 45px;
     grid-template-areas: 'sitenav socialnav' 'info content' 'info content' 'footer footer';
-    background-image: url(/images/uploads/wainscot-background.jpg), url(/images/uploads/plaster-background.jpg);
+    background-image: url(/images/wainscot-background.jpg), url(/images/plaster-background.jpg);
     background-size: 35% 57%, 100% 100%;
     background-repeat: repeat-x, no-repeat;
     background-position-y: bottom, top;
@@ -153,7 +153,7 @@ body {
     display: inline-block;
     height: 110px;
     width: 110px;
-    background-image: url(/images/uploads/starburst.svg);
+    background-image: url(/images/starburst.svg);
     background-repeat: no-repeat;
     color: #fff;
     font-family: var(--serif);
@@ -171,7 +171,7 @@ body {
     width: 45%;
     min-width: 185px;
     padding: 15px 20px 30px 20px;
-    background-image: url(/images/uploads/painted-board.png);
+    background-image: url(/images/painted-board.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
@@ -324,7 +324,7 @@ footer {
     padding: 12px 25px;
     z-index: 200;
     border-top: solid 1px #291C11;
-    background-image: url(/images/uploads/leather.jpg);
+    background-image: url(/images/leather.jpg);
     background-size: cover;
     position: relative;
     top: -10px;
@@ -336,7 +336,7 @@ footer {
     grid-template-columns: 40% 60%;
     grid-template-rows: 40px 250px auto 45px;
     grid-template-areas: 'sitenav socialnav' 'logo header''content content' 'footer footer';
-    background-image: url(/images/uploads/plaster-mobile.jpg);
+    background-image: url(/images/plaster-mobile.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: top;
@@ -652,7 +652,7 @@ footer {
         grid-template-columns: 100%;
         grid-template-rows: auto;
         padding-bottom: 0;
-        background-image: url(/images/uploads/plaster-mobile.jpg);
+        background-image: url(/images/plaster-mobile.jpg);
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: top;
