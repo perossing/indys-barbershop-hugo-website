@@ -6,7 +6,8 @@
 
     <div class="page-container page-container_gallery">
         {{ partial "navbar.html" . }}
-        <img class="window-logo" src="/images/window-logo.png">
+        <img class="window-logo" src="/images/window-logo.png" alt="Indy's Barbershop logo in vintage window lettering style">
+        <h1 class="gallery_heading">Indy's Barbershop Photo Gallery</h1>
         <section class="gallery_header">
                 {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
                 {{ range $shopInfo}}
