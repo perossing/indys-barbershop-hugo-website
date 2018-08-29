@@ -361,7 +361,6 @@ footer {
     color: #291C11;
     margin-top: 30px;
     width: 95%;
-    /* height: 5em;  */ 
 }
 
 .gallery_blurb em {
@@ -391,6 +390,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 25px;
 }
 
 .gallery_thumbnail {

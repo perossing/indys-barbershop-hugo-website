@@ -52,7 +52,7 @@ collections:
     fields:
       - {label: "image title", name: "title", widget: "string"}
       - {label: "thumbnail image (200px wide x 195px high)", name: "thumbnail", widget: "image"}
-      - {label: "full-page image", name: "image", widget: "image"}
+      - {label: "full-page image (max width: 1100px | max height 750px)", name: "image", widget: "image"}
       - {label: "description", name: "description", widget: "text"}
       - {label: "order", name: "weight", widget: "number"}
       - {label: "type", name: "type", widget: "hidden", default: "gallery"}
