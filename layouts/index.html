@@ -1,6 +1,5 @@
 {{ partial "head.html" . }}
 
-
 <body>
 
     <div class="page-container page-container_home">
@@ -8,7 +7,7 @@
         {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
         {{ range $shopInfo}}
         <div class="home_shop-info">
-            <img class="cartouche" src="/images/cartouche-logo.png">
+            <img class="cartouche" src="/images/cartouche-logo.png" alt="Indy's Barbershop logo in old-fashioned sign painter's style">
             <div class="logo-text">
                 <h1 class="home_biz-name">Indy's Barbershop</h1>
 
@@ -64,11 +63,10 @@
             </section>
         </div>
 
-
         <div class="home_content">
-            <img class="home_pic" src="images/uploads/billiards_home.jpg">
+            <img class="home_pic" src="images/billiards_home.jpg" alt="Jason Krause, owner, trims a customer's hair at Indy's with vintage billiard table in foreground">
             <div class="shield">
-                <img src="images/shield.png" />
+                <img src="images/shield.png" alt=""/>
                 <section class="home_intro">
                     <!-- Will need to make this text editable -->
                     <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls in the
@@ -97,8 +95,6 @@
             });
         }
     </script>
-
-
 
 </body>
 
