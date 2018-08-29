@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 :root {
@@ -15,6 +16,7 @@
 }
 
 body {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#736D5C), to(#291C11));
     background-image: linear-gradient(#736D5C, #291C11);
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,7 +29,8 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     border: solid 1px #8b8676;
-    box-shadow: 3px 3px 8px #291C11;
+    -webkit-box-shadow: 3px 3px 8px #291C11;
+            box-shadow: 3px 3px 8px #291C11;
 }
 
 .page-container_home {
@@ -43,9 +46,16 @@ body {
 .home_shop-info {
     max-width: 540px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     grid-area: info;
     text-align: center;
 }
@@ -133,7 +143,9 @@ body {
     color: #F7F4E6;
     display: inline-block;
     margin-right: 100%;
-    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+    font-weight: normal;
 }
 
 .home_hours_days {
@@ -143,14 +155,17 @@ body {
     margin: -12px auto 12px auto;
 }
 
-.home_hours_column {
+.home_hours_column, .home_hours_column h3 {
     font-family: var(--sans);
     display: inline-block;
-    width: 48%;
     font-size: 22px;
     font-weight: 400;
     color: #FFC04D;
     line-height: 1.35em;
+}
+
+.home_hours_column {
+    width: 48%;
 }
 
 .home_hours_am-pm {
@@ -177,7 +192,8 @@ body {
     color: #fff;
     font-family: var(--serif);
     font-style: italic;
-    transform: rotateZ(-16deg);
+    -webkit-transform: rotateZ(-16deg);
+            transform: rotateZ(-16deg);
     padding-top: 22px;
     position: relative;
     left: 25px;
@@ -236,6 +252,7 @@ body {
 
 .pricing_service,
 .pricing_price {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 1)));
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
     text-align: left;
     text-transform: capitalize;
@@ -257,7 +274,8 @@ body {
     width: 96%;
     margin: 30px auto 0 auto;
     border: solid 4px #DBD3B8;
-    box-shadow: 0 2px 5px #63401C;
+    -webkit-box-shadow: 0 2px 5px #63401C;
+            box-shadow: 0 2px 5px #63401C;
 }
 
 .shield {
@@ -268,7 +286,8 @@ body {
 }
 
 .shield img {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
     width: 100%;
     max-height: 360px;
 }
@@ -288,9 +307,10 @@ body {
     margin-bottom: 0.75em;
 }
 
-.emphasis {
+.home_intro-emphasis {
     font-style: italic;
-    font-size: 1.05em;
+    font-size: 1.1em;
+    font-weight: normal;
 }
 
 /* ===== NAVBAR ===== */
@@ -300,7 +320,8 @@ body {
     vertical-align: middle;
     font-family: var(--sans);
     font-size: 18px;
-    box-shadow: 0 2px 8px #352e29;
+    -webkit-box-shadow: 0 2px 8px #352e29;
+            box-shadow: 0 2px 8px #352e29;
     position: fixed;
     top: 0;
 }
@@ -414,10 +435,18 @@ footer {
 
 .gallery_container {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 25px;
 }
 
@@ -431,7 +460,8 @@ footer {
     height: 195px;
     width: 200px;
     border: solid 4px #f6f4ee;
-    box-shadow: 0 2px 15px #63401C;
+    -webkit-box-shadow: 0 2px 15px #63401C;
+            box-shadow: 0 2px 15px #63401C;
     display: block;
     position: relative;
 }
@@ -450,7 +480,9 @@ footer {
     font-size: 20px;
     padding: 25% 10% 0 10%;
     opacity: 0;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(99, 64, 28, 0.2)), to(rgba(99, 64, 28, 0.9)));
     background-image: linear-gradient(to bottom right, rgba(99, 64, 28, 0.2), rgba(99, 64, 28, 0.9));
+    -webkit-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in;
 }
 
@@ -491,9 +523,11 @@ footer {
     max-width: 90%;
     opacity: 0;
     border: solid 4px #c1b48a;
-    box-shadow: 2px 3px 20px #291C11;
+    -webkit-box-shadow: 2px 3px 20px #291C11;
+            box-shadow: 2px 3px 20px #291C11;
     position: relative;
     top: -10px;
+    -webkit-transition: opacity 0.5s linear;
     transition: opacity 0.5s linear;
 }
 
@@ -518,7 +552,8 @@ footer {
     text-decoration: none;
     padding-bottom: 2px;
     background: #426663;
-    box-shadow: 1px 2px 10px #291C11;
+    -webkit-box-shadow: 1px 2px 10px #291C11;
+            box-shadow: 1px 2px 10px #291C11;
     border-radius: 2px;
 }
 
@@ -667,7 +702,8 @@ footer {
     }
 
     .parking {
-        transform: rotateZ(-16deg) scale(0.85);
+        -webkit-transform: rotateZ(-16deg) scale(0.85);
+                transform: rotateZ(-16deg) scale(0.85);
     }
 
     .pricing_board {
@@ -822,7 +858,8 @@ footer {
 
     .nav_main {
         max-width: none;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     .nav_social {
@@ -841,7 +878,8 @@ footer {
     }
 
     .home_shop-info {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
 
     .pricing_board {
@@ -879,7 +917,8 @@ footer {
     }
 
     .parking {
-        transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+                transform: rotateZ(-10deg);
         left: 25px;
     }
 
