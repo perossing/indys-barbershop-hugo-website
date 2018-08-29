@@ -31,7 +31,7 @@ collections:
         name: "gallery"
         create: false
         fields:
-          - {label: "Intro paragraph", name: "title", widget: "text"}
+          - {label: "Intro paragraph", name: "intro", widget: "text"}
           - {label: "Photo credits", name: "credits", widget: "string"}
 
   - label: "Services and Pricing"
