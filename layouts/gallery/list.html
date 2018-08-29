@@ -12,7 +12,7 @@
                 {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
                 {{ range $shopInfo}}
             <div class="contact_address">
-                <a class="address_google-maps" href="https://www.google.com/maps/place/711+N+Monroe+St,+Spokane,+WA+99201/@47.6638506,-117.4291364,17z/data=!3m1!4b1!4m5!3m4!1s0x549e185ed56771eb:0x55100c658974d5b0!8m2!3d47.6638506!4d-117.4269477" target="_blank">{{.Params.streetAddress}}</span>
+                <a class="address_google-maps" href="https://www.google.com/maps/place/711+N+Monroe+St,+Spokane,+WA+99201/@47.6638506,-117.4291364,17z/data=!3m1!4b1!4m5!3m4!1s0x549e185ed56771eb:0x55100c658974d5b0!8m2!3d47.6638506!4d-117.4269477" target="_blank"><span>{{.Params.streetAddress}}</span>
                 <span>Spokane, Washington</span></a>
             </div>
             <div class="contact_phone"><a href="tel:1-509-808-1959">{{.Params.phone}}</a></div>
@@ -43,16 +43,16 @@
                                 <ul>
                                     <li class="gallery_nav_btn">
                                         {{if .NextInSection}}
-                                        <a href="#{{ .NextInSection.Title | urlize}}">prev</a>
+                                        <a class="gallery_nav_btn-prev" href="#{{ .NextInSection.Title | urlize}}">prev</a>
                                         {{end}}
                                     </li>
                                     <li class="gallery_nav_btn">
                                         {{if .PrevInSection}}
-                                        <a href="#{{.PrevInSection.Title | urlize }}">next</a>
+                                        <a class="gallery_nav_btn-next" href="#{{.PrevInSection.Title | urlize }}">next</a>
                                         {{end}}
                                     </li>
                                 </ul>
-                                <a href="/gallery" id="gallery_close">close</a>
+                                <a href="/gallery" class="gallery_close">close</a>
                             </div>
 
                         </div>
