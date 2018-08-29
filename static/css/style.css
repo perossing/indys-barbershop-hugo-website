@@ -355,14 +355,28 @@ footer {
     margin-top: 40px;
 }
 
-.gallery_blurb p {
+.gallery_blurb {
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 18px;
     color: #291C11;
     margin-top: 30px;
     width: 95%;
-    height: 5em;
-    
+    /* height: 5em;  */ 
+}
+
+.gallery_blurb em {
+    font-size: 16px;
+    font-style: italic;
+    padding: 0 4px;
+}
+
+.gallery_credits {
+    font-family: var(--serif);
+    font-size: 13px;
+    display: block;
+    margin-top: 14px;
+    font-weight: 700;
+    color: #63401C;
 }
 
 .gallery_content {
@@ -760,12 +774,16 @@ footer {
     .home_hours_column {
         width: 48%;
         font-size: 24px;
+        color: #291C11;
+        text-shadow: 2px 2px 8px #FFC04D;
     }
     .home_hours_am-pm {
         font-size: 18px;
     }
     .home_hours_closed {
         font-size: 18px;
+        color: #4D2F17;
+        text-shadow: none;
     }
     .parking {
         transform: rotateZ(-10deg);

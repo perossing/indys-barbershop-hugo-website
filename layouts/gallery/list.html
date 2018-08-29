@@ -13,7 +13,8 @@
                 <div>Spokane, Washington</div>
             </div>
             <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
-            <div class="gallery_blurb">{{.Content}}</div>
+            <div class="gallery_blurb">{{.Params.title}}<em> (click on thumbnails to see larger pictures) </em><span class="gallery_credits">photography by: {{.Params.credits}}</span></div>
+
         </section>
 
         <div class="gallery_content">
