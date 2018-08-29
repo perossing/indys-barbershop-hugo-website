@@ -16,10 +16,11 @@
 
             <div class="home_contact">
                 <div class="contact_address">
-                    <div>{{.Params.streetAddress}}</div>
-                    <div>Spokane, Washington</div>
+                    <a class="address_google-maps" href="https://www.google.com/maps/place/711+N+Monroe+St,+Spokane,+WA+99201/@47.6638506,-117.4291364,17z/data=!3m1!4b1!4m5!3m4!1s0x549e185ed56771eb:0x55100c658974d5b0!8m2!3d47.6638506!4d-117.4269477"
+                        target="_blank">{{.Params.streetAddress}}</span>
+                        <span>Spokane, Washington</span></a>
                 </div>
-                <div class="contact_phone">{{.Params.phone}}</div>
+                <div class="contact_phone"><a href="tel:1-509-808-1959">{{.Params.phone}}</a></div>
             </div>
 
             <section class="home_hours">
@@ -66,14 +67,17 @@
         <div class="home_content">
             <img class="home_pic" src="images/billiards_home.jpg" alt="Jason Krause, owner, trims a customer's hair at Indy's with vintage billiard table in foreground">
             <div class="shield">
-                <img src="images/shield.png" alt=""/>
+                <img src="images/shield.png" alt="" />
                 <section class="home_intro">
                     <!-- Will need to make this text editable -->
-                    <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls in the
-                        historic late-1880’s Dresden building. We offer quality haircuts and fades, hot-towel straight-razor
+                    <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls
+                        in the
+                        historic late-1880’s Dresden building. We offer quality haircuts and fades, hot-towel
+                        straight-razor
                         shaves, and beard trims.
                     </p>
-                    <p>Get a haircut or hot-towel shave at an affordable price, check out the antique decor, play a game of
+                    <p>Get a haircut or hot-towel shave at an affordable price, check out the antique decor, play a
+                        game of
                         billiards, have some good conversation, and enjoy your time with us!</p>
                     <p class="emphasis">No appointment necessary. You're next!</p>
                 </section>

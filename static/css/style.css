@@ -85,19 +85,34 @@ body {
     text-shadow: var(--text-shadow_light);
     vertical-align: top;
     text-align: center;
-    line-height: 1.35em;
 }
 
 .contact_address {
     font-size: 22px;
     font-weight: 500;
     color: #002080;
+    line-height: 1.35em;
 }
 
-.contact_phone {
+.address_google-maps {
+    display: block;
+    text-decoration: none;
+}
+
+.address_google-maps span {
+    display: block;
+}
+
+.address_google-maps:hover {
+   color: #2080df;
+}
+
+.contact_phone a {
     font-size: 30px;
     font-weight: 600;
     color: #A81F09;
+    text-decoration: none;
+    line-height: 1.35em;
 }
 
 .home_hours {
