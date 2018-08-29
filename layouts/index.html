@@ -4,7 +4,9 @@
 <body>
 
     <div class="page-container page-container_home">
-        {{ partial "navbar.html" . }} {{ $shopInfo := where .Site.Pages ".Params.type" "info"}} {{ range $shopInfo}}
+        {{ partial "navbar.html" . }}
+        {{ $shopInfo := where .Site.Pages ".Params.type" "info"}}
+        {{ range $shopInfo}}
         <div class="home_shop-info">
             <img class="cartouche" src="/images/uploads/cartouche-logo.png">
             <div class="logo-text">

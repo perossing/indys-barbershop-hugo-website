@@ -19,7 +19,7 @@
         <div class="gallery_content">
             <ul class="gallery_container">
 
-                {{range .Pages}}
+                {{range where .Pages ".Params.type" "gallery"}}
 
                 <li class="gallery_thumbnail">
                     <a href="#{{ urlize .Title}}">
