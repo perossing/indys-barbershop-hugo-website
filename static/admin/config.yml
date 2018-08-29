@@ -26,13 +26,14 @@ collections:
           - {label: "opening time: Saturday", name: "saturdayOpen", widget: "string"}
           - {label: "closing time: weekdays", name: "saturdayOpen", widget: "string"}
           - {label: "type", name: "type", widget: "hidden"}
-      - file: "content/gallery/_index.md"
-        label: "Gallery Page intro paragraph"
-        name: "gallery"
+      - file: "content/gallery-intro.md"
+        label: "Gallery Page intro and photo credits"
+        name: "gallery-intro"
         create: false
         fields:
           - {label: "Intro paragraph", name: "intro", widget: "text"}
           - {label: "Photo credits", name: "credits", widget: "string"}
+          - {label: "type", name: "type", widget: "hidden"}
 
   - label: "Services and Pricing"
     name: "services"

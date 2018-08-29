@@ -13,8 +13,10 @@
                 <div>Spokane, Washington</div>
             </div>
             <div class="contact_phone">{{.Site.Data.shopInfo.phone}}</div>
+            {{ $galleryIntro := where .Site.Pages ".Params.type" "intro"}}
+            {{ range $galleryIntro}}
             <div class="gallery_blurb">{{.Params.intro}}<em> (click on thumbnails to see larger pictures) </em><span class="gallery_credits">photography by: {{.Params.credits}}</span></div>
-
+            {{end}}
         </section>
 
         <div class="gallery_content">
