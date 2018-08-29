@@ -34,13 +34,13 @@
                             <div class="gallery_nav">
                                 <ul>
                                     <li class="gallery_nav_btn">
-                                        {{if .Prev}}
-                                        <a href="#{{.Prev.Title | urlize }}" >prev</a>
+                                        {{if .NextInSection}}
+                                        <a href="#{{ .NextInSection.Title | urlize}}">prev</a>
                                         {{end}}
                                     </li>
                                     <li class="gallery_nav_btn">
-                                        {{if .Next}}
-                                        <a href="#{{ .Next.Title | urlize}}">next</a>
+                                        {{if .PrevInSection}}
+                                        <a href="#{{.PrevInSection.Title | urlize }}" >next</a>
                                         {{end}}
                                     </li>
                                 </ul>
