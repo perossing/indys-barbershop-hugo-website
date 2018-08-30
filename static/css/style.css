@@ -9,7 +9,6 @@
     --shadow: 3px 4px 10px #534940, inset 3px 5px 8px #534940;
     --text-shadow_dark: 2px 2px 8px #281a0b, -2px -1px 8px #281a0b;
     --text-shadow_light: -3px 1px 20px #fff;
-    --text-shadow_gold: 2px 2px 8px #FFC04D;
     --sans: 'Oswald', sans-serif;
     --serif: 'Merriweather', serif;
     --deco: 'Yesteryear', cursive;
@@ -21,6 +20,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
 }
 
 .page-container {
@@ -145,7 +151,6 @@ body {
     margin-right: 100%;
     -webkit-transform: rotateZ(-10deg);
     transform: rotateZ(-10deg);
-    font-weight: normal;
 }
 
 .home_hours_days {
@@ -311,7 +316,6 @@ body {
 .home_intro-emphasis {
     font-style: italic;
     font-size: 1.1em;
-    font-weight: normal;
 }
 
 /* ===== NAVBAR ===== */
@@ -396,7 +400,8 @@ footer {
     color: #9d947b;
     font-size: 26px;
     margin-top: 165px;
-    text-shadow: var(--text-shadow_gold);
+    width: 90%;
+    text-align: center;
 }
 
 .gallery_header {
@@ -641,7 +646,8 @@ footer {
         font-size: 17px;
     }
 
-    .home_hours_column {
+    .home_hours_column,
+    .home_hours_column h3 {
         font-size: 19px;
     }
 
@@ -722,6 +728,11 @@ footer {
         padding-top: 10%;
         line-height: 1.3em;
     }
+
+    .gallery_heading {
+        font-size: 22px;
+        margin-top: 145px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -730,7 +741,8 @@ footer {
         font-size: 18px;
     }
 
-    .home_hours_column {
+    .home_hours_column,
+    .home_hours_column h3 {
         font-size: 17px;
     }
 
@@ -755,11 +767,9 @@ footer {
     .shield img {
         height: 305px;
     }
-
-    /* .gallery_caption {
-        font-size: 14px;
-        width: 95%;
-    } */
+    .gallery_heading {
+        margin-top: 130px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -784,6 +794,11 @@ footer {
     .window-logo {
         grid-area: logo;
         margin-top: 100px;
+    }
+
+    .gallery_heading {
+        margin-top: 230px;
+        font-size: 24px;
     }
 
     .gallery_header {
@@ -901,11 +916,11 @@ footer {
         font-size: 37px;
     }
 
-    .home_hours_column {
-        width: 48%;
+    .home_hours_column,
+    .home_hours_column h3 {
         font-size: 24px;
         color: #291C11;
-        text-shadow: var(--text-shadow_gold);
+        text-shadow: 2px 2px 15px #FFC04D;
     }
 
     .home_hours_am-pm {
@@ -915,7 +930,7 @@ footer {
     .home_hours_closed {
         font-size: 18px;
         color: #4D2F17;
-        text-shadow: none;
+        text-shadow: 2px 2px 15px #FFC04D;
     }
 
     .parking {
@@ -998,7 +1013,8 @@ footer {
         font-size: 24px;
     }
 
-    .home_hours_column {
+    .home_hours_column,
+    .home_hours_column h3 {
         font-size: 18px;
     }
 
