@@ -28,15 +28,15 @@
                 <div class="home_hours_days">
                     <div class="home_hours_column">
                         <h3>Tuesday - Friday:</h3>
-                        <p>{{.Params.weekdayOpen}}
-                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.weekdayClose}}
+                        <p>{{.Params.weekdayOpenTime}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.weekdayCloseTime}}
                             <span class="home_hours_am-pm">P.M.</span>
                         </p>
                     </div>
                     <div class="home_hours_column">
                         <h3>Saturday:</h3>
-                        <p>{{.Params.saturdayOpen}}
-                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.saturdayClose}}
+                        <p>{{.Params.saturdayOpenTime}}
+                            <span class="home_hours_am-pm">A.M. </span>to {{.Params.saturdayCloseTime}}
                             <span class="home_hours_am-pm">P.M.</span>
                         </p>
                     </div>
@@ -69,8 +69,11 @@
             <div class="shield">
                 <img src="images/shield.png" alt="" />
                 <section class="home_intro">
+                        {{ range $shopInfo}}
+                    {{ .Content }}
+                    {{ end }}
                     <!-- Will need to make this text editable -->
-                    <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls
+                    <!-- <p>Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls
                         in the
                         historic late-1880’s Dresden building. We offer quality haircuts and fades, hot-towel
                         straight-razor
@@ -79,7 +82,7 @@
                     <p>Get a haircut or hot-towel shave at an affordable price, check out the antique decor, play a
                         game of
                         billiards, have some good conversation, and enjoy your time with us!</p>
-                    <h4 class="home_intro-emphasis">No appointment necessary. You're next!</h4>
+                    <h4 class="home_intro-emphasis">No appointment necessary. You're next!</h4> -->
                 </section>
             </div>
         </div>

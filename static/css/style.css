@@ -313,7 +313,7 @@ h4 {
     margin-bottom: 0.75em;
 }
 
-.home_intro-emphasis {
+.home_content em {
     font-style: italic;
     font-size: 1.1em;
 }
