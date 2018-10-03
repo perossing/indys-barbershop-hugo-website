@@ -25,6 +25,7 @@ collections:
           - {label: "closing time: weekdays", name: "weekdayCloseTime", widget: "string"}
           - {label: "opening time: Saturday", name: "saturdayOpenTime", widget: "string"}
           - {label: "closing time: Saturday", name: "saturdayOpenTime", widget: "string"} 
+          - {label: "Home-page text", name: "body", widget: "markdown"}
           - {label: "type", name: "type", widget: "hidden"}
       - file: "content/gallery-intro.md"
         label: "Gallery Page intro and photo credits"
@@ -50,10 +51,10 @@ collections:
     folder: "content/gallery"
     create: true
     fields:
-      - {label: "image title", name: "title", widget: "string"}
+      - {label: "image title (pops up over thumbnail)", name: "title", widget: "string"}
       - {label: "thumbnail image (200px wide x 195px high)", name: "thumbnail", widget: "image"}
       - {label: "full-page image (max width: 1100px | max height 750px)", name: "image", widget: "image"}
-      - {label: "description", name: "description", widget: "text"}
+      - {label: "description (caption under large picture)", name: "description", widget: "text"}
       - {label: "order", name: "weight", widget: "number"}
       - {label: "type", name: "type", widget: "hidden", default: "gallery"}
 
