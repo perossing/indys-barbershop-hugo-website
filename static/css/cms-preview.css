@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Oswald:400');
 
 
 html,
@@ -17,4 +17,9 @@ strong {
 
 img {
     max-width: 95%;
+}
+
+.gallery_thumbnail_overlay {
+    font-family: "Oswald", sans;   
+    font-size: 20px;    
 }
