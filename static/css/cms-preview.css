@@ -19,7 +19,7 @@ img {
     max-width: 95%;
 }
 
-.gallery_thumbnail_overlay {
+span {
     font-family: "Oswald", sans;   
     font-size: 20px;    
 }
