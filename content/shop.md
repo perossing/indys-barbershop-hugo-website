@@ -2,6 +2,8 @@
 tagline: Quality Haircuts & Hot Towel Shaves
 streetAddress: 711 N Monroe St
 phone: 509-808-1959
+daysOpen: Tuesday - Friday
+daysClosed: Sunday & Monday
 weekdayOpenTime: 10
 weekdayCloseTime: 6
 saturdayOpenTime: 10

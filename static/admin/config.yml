@@ -19,13 +19,15 @@ collections:
         create: false
         fields:
           - {label: "tagline", name: "tagline", widget: "string"}
+          - {label: "Home-page text", name: "body", widget: "markdown"}
           - {label: "street address", name: "streetAddress", widget: "string"}
           - {label: "phone number", name: "phone", widget: "string"}
+          - {label: "days open (weekdays)", name: "daysOpen", widget: "string"}
           - {label: "opening time: weekdays", name: "weekdayOpenTime", widget: "string"}
           - {label: "closing time: weekdays", name: "weekdayCloseTime", widget: "string"}
           - {label: "opening time: Saturday", name: "saturdayOpenTime", widget: "string"}
-          - {label: "closing time: Saturday", name: "saturdayOpenTime", widget: "string"} 
-          - {label: "Home-page text", name: "body", widget: "markdown"}
+          - {label: "closing time: Saturday", name: "saturdayOpenTime", widget: "string"}
+          - {label: "days closed", name: "daysClosed", widget: "string"}           
           - {label: "type", name: "type", widget: "hidden"}
       - file: "content/gallery-intro.md"
         label: "Gallery Page intro and photo credits"

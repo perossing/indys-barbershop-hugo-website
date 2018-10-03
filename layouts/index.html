@@ -27,7 +27,7 @@
                 <h3 class="home_hours_open">Open:</h3>
                 <div class="home_hours_days">
                     <div class="home_hours_column">
-                        <h3>Tuesday - Friday:</h3>
+                        <h3>{{.Params.daysOpen}}</h3>
                         <p>{{.Params.weekdayOpenTime}}
                             <span class="home_hours_am-pm">A.M. </span>to {{.Params.weekdayCloseTime}}
                             <span class="home_hours_am-pm">P.M.</span>
@@ -40,7 +40,7 @@
                             <span class="home_hours_am-pm">P.M.</span>
                         </p>
                     </div>
-                    <h4 class="home_hours_closed">closed Sunday &amp; Monday</h4>
+                    <h4 class="home_hours_closed">closed {{.Params.daysClosed}}</h4>
                 </div>
             </section>
             {{end}}
