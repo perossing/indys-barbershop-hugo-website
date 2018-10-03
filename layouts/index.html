@@ -65,15 +65,17 @@
         </div>
 
         <div class="home_content">
-            <img class="home_pic" src="images/billiards_home.jpg" alt="Jason Krause, owner, trims a customer's hair at Indy's with vintage billiard table in foreground">
+                {{ range $shopInfo}}
+            <img class="home_pic" src="{{.Params.image}}" alt="Jason Krause, owner, trims a customer's hair at Indy's with vintage billiard table in foreground">
             <div class="shield">
                 <img src="images/shield.png" alt="" />
                 <section class="home_intro">
-                        {{ range $shopInfo}}
+                        
                     {{ .Content }}
-                    {{ end }}
+                    
                 </section>
             </div>
+            {{ end }}
         </div>
 
         <footer class="footer_home">Look Good, Feel Good</footer>

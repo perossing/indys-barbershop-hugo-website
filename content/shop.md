@@ -8,6 +8,7 @@ weekdayOpenTime: 10
 weekdayCloseTime: 6
 saturdayOpenTime: 10
 saturdayCloseTime: 4
+image: /images/uploads/billiards.jpg
 type: info
 ---
 

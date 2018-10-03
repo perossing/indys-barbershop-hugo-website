@@ -19,6 +19,7 @@ collections:
         create: false
         fields:
           - {label: "tagline", name: "tagline", widget: "string"}
+          - {label: "home-page image", name: "image", widget: "image"}          
           - {label: "Home-page text", name: "body", widget: "markdown"}
           - {label: "street address", name: "streetAddress", widget: "string"}
           - {label: "phone number", name: "phone", widget: "string"}
