@@ -26,7 +26,7 @@ collections:
           - {label: "opening time: weekdays", name: "weekdayOpenTime", widget: "string"}
           - {label: "closing time: weekdays", name: "weekdayCloseTime", widget: "string"}
           - {label: "opening time: Saturday", name: "saturdayOpenTime", widget: "string"}
-          - {label: "closing time: Saturday", name: "saturdayOpenTime", widget: "string"}
+          - {label: "closing time: Saturday", name: "saturdayCloseTime", widget: "string"}
           - {label: "days closed", name: "daysClosed", widget: "string"}           
           - {label: "type", name: "type", widget: "hidden"}
       - file: "content/gallery-intro.md"
