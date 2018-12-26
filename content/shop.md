@@ -1,14 +1,14 @@
 ---
 tagline: Quality Haircuts & Hot Towel Shaves
+image: /images/uploads/billiards.jpg
 streetAddress: 711 N Monroe St
 phone: 509-808-1959
-daysOpen: Tuesday - Friday
-daysClosed: Sunday & Monday
+daysOpen: Monday - Friday
 weekdayOpenTime: 10
 weekdayCloseTime: 6
 saturdayOpenTime: 10
 saturdayCloseTime: 4
-image: /images/uploads/billiards.jpg
+daysClosed: Sunday
 type: info
 ---
 
