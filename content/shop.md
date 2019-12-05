@@ -4,11 +4,11 @@ image: /images/uploads/billiards.jpg
 streetAddress: 711 N Monroe St
 phone: 509-808-1959
 daysOpen: Tuesday - Friday
-weekdayOpenTime: '9'
-weekdayCloseTime: '5:45'
+weekdayOpenTime: '10'
+weekdayCloseTime: '6:00'
 saturdayOpenTime: '9'
 saturdayCloseTime: 4
-daysClosed: Sunday & Monday
+daysClosed: Open Sunday & Monday 10-5
 type: info
 ---
 
