@@ -1,6 +1,6 @@
 ---
 title: Beard Trim
-price: $7
-type: service
+price: $10 when available (no beard trims during Covid19 pandemic)
 weight: 4
+type: service
 ---
