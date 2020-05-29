@@ -1,6 +1,6 @@
 ---
 title: Haircut
-price: $19
-type: service
+price: $25
 weight: 1
+type: service
 ---
