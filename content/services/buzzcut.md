@@ -1,6 +1,6 @@
 ---
 title: Buzzcut
-price: $13
-type: service
+price: $20
 weight: 2
+type: service
 ---
