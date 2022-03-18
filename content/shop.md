@@ -11,4 +11,4 @@ saturdayCloseTime: 2pm
 daysClosed: Sunday
 type: info
 ---
-Indy's is a traditional barbershop in Spokane, Washington, located one block from Spokane Falls in the historic late-1880’s Dresden building. We offer quality haircuts, fades and hot towel shaves. By appointment only. Call the shop to schedule a haircut 509-808-1959. Thank you and have a great day!
+Indy's is a traditional barbershop located one block north of Spokane Falls in downtown Spokane,Washington. We are on the bottom floor of the historic Dresden building, built in the 1880's. Our address is 711 N. Monroe Street. We offer high quality haircuts, fades and hot towel straight razor shaves. Every haircut is finished with a straight razor neck shave and line up. We do excellent scissor and clipper cuts. Look good, feel good. It pays to look well. We do take appointments so please call the shop during business hours to schedule a service at 509-808-1959. Thank you and have a good day
