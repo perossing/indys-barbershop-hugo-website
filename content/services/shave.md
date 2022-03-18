@@ -1,6 +1,6 @@
 ---
 title: Shave
-price: "$30 ( unavailable during Covid19 pandemic) "
+price: "$30 "
 weight: 3
 type: service
 ---
